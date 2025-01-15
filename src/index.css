@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #6366f1 0%, #10b981 50%, #3b82f6 100%);
+}
+
+.task-card {
+  transition: all 0.2s ease;
+  transform-origin: 50% 50%;
+}
+
+.task-card:hover {
+  transform: translateY(-2px);
+}
+
+.task-card.dragging {
+  transform: scale(1.02) rotate(1deg);
+}
+
+.task-priority-low {
+  background: linear-gradient(to right, #ffffff, #f0fdf4);
+  border-left: 4px solid #4CAF50;
+}
+
+.task-priority-medium {
+  background: linear-gradient(to right, #ffffff, #fef3c7);
+  border-left: 4px solid #FFA000;
+}
+
+.task-priority-high {
+  background: linear-gradient(to right, #ffffff, #fee2e2);
+  border-left: 4px solid #F44336;
+}
